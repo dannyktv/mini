@@ -1,5 +1,8 @@
 package kh.spring.interfaces;
 
-public interface MemberService {
+import kh.spring.dto.MemberDTO;
 
+public interface MemberService {
+	public int memberDelete(MemberDTO dto) throws Exception;
+	public int memberUpdate(MemberDTO dto) throws Exception;
 }
