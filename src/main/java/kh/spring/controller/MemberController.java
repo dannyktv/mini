@@ -14,7 +14,7 @@ public class MemberController {
 	@Autowired
 	private MemberService service;
 	
-	@RequestMapping("delete.mem")
+	@RequestMapping("/delete.mem")
 	public ModelAndView delete(MemberDTO dto) throws Exception{
 		
 		int resultDelete = this.service.memberDelete(dto);
@@ -24,7 +24,7 @@ public class MemberController {
 		return mav;
 	}
 	
-	@RequestMapping("update.mem")
+	@RequestMapping("/update.mem")
 	public ModelAndView update(MemberDTO dto) throws Exception{
 		
 		int resultUpdate = this.service.memberUpdate(dto);
