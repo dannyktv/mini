@@ -14,6 +14,8 @@ public class IMemberService implements MemberService{
 	public int memberDelete(MemberDTO dto) throws Exception{
 		return dao.memberDelete(dto);
 	}
+	
+	@Override
 	public int memberUpdate(MemberDTO dto) throws Exception{
 		return dao.memberUpdate(dto);
 	}

@@ -33,6 +33,4 @@ public class MemberController {
 		mav.setViewName("login.jsp");
 		return mav;
 	}
-	
-	
 }
