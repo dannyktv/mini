@@ -13,7 +13,7 @@
 
 <tr>
 <td>아이디</td>
-<td>비밀번호</td>
+
 <td>이메일</td>
 </tr>
 
@@ -23,7 +23,7 @@
 
 <tr>
 <td>${result.id}
-<td>${result.pw}
+
 <td>${result.name}
 </tr>
 

@@ -1,15 +1,8 @@
 package kh.spring.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
-
-import kh.spring.dto.MemberDTO;
-import kh.spring.interfaces.MemberService;
-
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -91,9 +84,16 @@ public class MemberController {
 		ModelAndView mav = new ModelAndView();
 		String id = (String)req.getSession().getAttribute("loginId");
 		List<MemberDTO> result = this.service.getAllData(id);
+		System.out.println(result.size());
+		System.out.println(result.get(0).getId());
 		mav.setViewName("mypage.jsp");
 		mav.addObject("result", result.get(0));
 		return mav;
+	}
+	@RequestMapping("/logout.mem")
+	public String logout(HttpSession session) throws Exception{
+		session.invalidate();
+		return "login.jsp";
 	}
 	
 }

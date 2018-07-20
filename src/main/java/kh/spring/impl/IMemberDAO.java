@@ -68,7 +68,9 @@ public class IMemberDAO implements MemberDAO{
 			public MemberDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
 				// TODO Auto-generated method stub
 				MemberDTO tmp = new MemberDTO();
-			
+				tmp.setId(rs.getString("id"));
+				tmp.setPw(rs.getString("pw"));
+				tmp.setName(rs.getString("name"));
 				return tmp;
 			}
 			

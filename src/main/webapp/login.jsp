@@ -27,7 +27,8 @@
 
          <script>
             document.getElementById("logout").onclick = function() {
-               location.href = "logout.mem";
+              
+            	location.href = "logout.mem";
             }
 
             document.getElementById("mypage").onclick = function() {
@@ -81,6 +82,7 @@
             document.getElementById("loginbt").onclick = function() {
                 location.href = "loginProc.mem";
              }
+      
          </script>
       </c:otherwise>
    </c:choose>
