@@ -9,9 +9,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
 </head>
 <body>
-<form action="join.mem" method=post>
+<form action="joinProc.mem" method=post>
       <table border=2>
          <tr>
             <th colspan="2">회원 가입 정보</th>
@@ -23,7 +24,7 @@
          </tr>
          <tr>
             <td class="right">비밀번호:</td>
-            <td><input id="pw" type="password" name="password"></td>
+            <td><input id="pw" type="password" name="pw"></td>
          </tr>
   
          <tr>
@@ -31,13 +32,9 @@
             <td><input id="nametext" type="text" name="name"></td>
          </tr>
          <tr>
-            <td class="right">이메일:</td>
-            <td><input type="email" name="email"></td>
-         </tr>
-         <tr>
             <th colspan="2">
-               <button id="joinbt" type="submit">회원가입</button>
-               <button id="resetbt">다시입력</button>
+               <button id="join" type="submit">회원가입</button>
+               <button id="back" type="button">돌아가기</button>
             </th>
          </tr>
       </table>
