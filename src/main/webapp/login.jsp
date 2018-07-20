@@ -27,7 +27,8 @@
 
          <script>
             document.getElementById("logout").onclick = function() {
-               location.href = "logout.mem";
+              
+            	location.href = "logout.mem";
             }
 
             document.getElementById("mypage").onclick = function() {
@@ -51,7 +52,7 @@
 
       </c:when>
       <c:otherwise>
-         <form action="login.mem" method="post">
+         <form action="loginProc.mem" method="post">
             <table border=1>
                <tr>
                   <th colspan="2">회원로그인</th>
@@ -77,7 +78,12 @@
             document.getElementById("joinbt").onclick = function() {
                location.href = "join.mem";
             }
-            </script>
+            
+            document.getElementById("loginbt").onclick = function() {
+                location.href = "loginProc.mem";
+             }
+      
+         </script>
       </c:otherwise>
    </c:choose>
 </body>
