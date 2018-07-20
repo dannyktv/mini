@@ -32,7 +32,7 @@
          </tr>
          <tr>
             <td class="right">이메일:</td>
-            <td><input type="email" name="email"></td>
+            <td><input type="email" name="e	mail"></td>
          </tr>
          <tr>
             <th colspan="2">
