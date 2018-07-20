@@ -36,9 +36,12 @@
 	<property name="dataSource" ref="dataSource"/>
 </bean>
 	
-<bean id="txManager" class="org.springframwork.jdbc.datasource.DataSourceTransactionManager">
-	<property name="datasource" ref="datasource"/>
-</bean>
-<tx:annotation-driven/>
+<!--    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> -->
+<!--       <property name="dataSource" ref ="dataSource"></property> -->
+<!--    </bean> -->
+   
+<!--    <tx:annotation-driven/> -->
+
+<context:component-scan base-package="kh.board" />
 
 </beans>
