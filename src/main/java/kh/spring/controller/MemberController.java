@@ -8,7 +8,6 @@ import org.springframework.web.servlet.ModelAndView;
 import kh.spring.dto.MemberDTO;
 import kh.spring.interfaces.MemberService;
 
-@Controller
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -27,12 +26,13 @@ public class MemberController {
 	@Autowired
 	private MemberService service;
 	
-	@RequestMapping("/delete.mem")
-	public ModelAndView delete(MemberDTO dto) throws Exception{
-		
-		int resultDelete = this.service.memberDelete(dto);
+	@RequestMapping("/memberout.mem")
+	public ModelAndView delete(HttpSession session) throws Exception{
+		String id = (String) session.getAttribute("loginId");
+		int resultDelete = this.service.memberDelete(id);
+		session.invalidate();
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("resultDelete", resultDelete);
+		
 		mav.setViewName("login.jsp");
 		return mav;
 	}
@@ -46,9 +46,6 @@ public class MemberController {
 		mav.setViewName("login.jsp");
 		return mav;
 	}
-	
-	@Autowired
-	private MemberService service;
 	
 	@RequestMapping("/login.mem")
 	public String toLogin() {
